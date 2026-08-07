@@ -1,28 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+    <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Anotações Aulas Lógica de Programação</title>
 </head>
-<body>
-    <h1>Sobre a linguagem C</h1>
-    <ul>
-        <li>É uma linguagem de programação de propósito geral</li>
-        <li>Foi desenvolvida por Dennis Ritchie entre 1969 e 1973 nos laboratórios Bell</li>
-        <li>É uma linguagem de baixo nível, mas com recursos de alto nível</li>
-        <li>É uma linguagem compilada</li>
-        <li>É uma linguagem estruturada</li>
-        <li>processador -> traduz o código fonte para código de máquina</li>
-        <li>diagrama de blocos -> representação gráfica de um algoritmo</li>
-        <li>algoritmo -> conjunto de instruções para resolver um problema</li>  
-    </ul>
+<body class="background">
+    <h1 class="titulo1">Anotações - Aulas Lógica de Programação</h1>
 
-    <h1>estrutura de um programa em C</h1>
-    <p>"#include <...>"</p>
-    <p>"#include <...>"</p>
-    <p>"int main()"</p>
+    <main class="carousel" aria-label="Carrossel de aulas">
+        <button class="arrow-button prev" aria-label="Slide anterior">&#10094;</button>
+
+        <section class="slides" aria-live="polite">
+            <section class="fundoaula slide active" data-slide="1">
+                <h2>Aula 1</h2>
+                <h3>Sobre a linguagem C</h3>
+                <ul>
+                    <li>É uma linguagem de programação de propósito geral</li>
+                    <li>Foi desenvolvida por Dennis Ritchie entre 1969 e 1973 nos laboratórios Bell</li>
+                    <li>É uma linguagem de baixo nível, mas com recursos de alto nível</li>
+                    <li>É uma linguagem compilada</li>
+                    <li>É uma linguagem estruturada</li>
+                    <li>processador -> traduz o código fonte para código de máquina</li>
+                    <li>diagrama de blocos -> representação gráfica de um algoritmo</li>
+                    <li>algoritmo -> conjunto de instruções para resolver um problema</li>
+                    <li>case sensitive -> diferencia maiúsculas de minúsculas</li>
+                </ul>
+
+                <h3>Variáveis</h3>
+                <p>Uma variável é um espaço na memória do computador que armazena um valor.</p>
+                <h3>Tipos de variáveis</h3>
+                <ul>
+                    <li>int -> armazena números inteiros <br>
+                        Ex: -1, 0, 1, 2, 3, ... <br>
+                        OBS: o tamanho de um int geralmente é de 4 bytes (32 bits).
+                    </li>
+                    <li>float -> armazena números reais <br>
+                        Ex: -1.5, 0.0, 1.5, 2.5, 3.5, ... <br>
+                        OBS: o tamanho de um float geralmente é de 4 bytes (32 bits).
+                    </li>
+                    <li>char -> armazena caracteres <br>
+                        Ex: 'a', 'b', 'c', ... <br>
+                        OBS: o tamanho de um char geralmente é de 1 byte (8 bits).
+
+                    </li>
+                    <li>double -> armazena números reais com maior precisão <br>
+                        Ex: -1.5, 0.0, 1.5, 2.5, 3.5, ... <br>
+                        OBS: o tamanho de um double geralmente é de 8 bytes (64 bits).
+                    </li>
+                    <!-- <img src="./imagens/bytes.png" alt="Representação de bytes"> -->
+                </ul>
+
+                <h3>Alguns comandos falados aula 1</h3>
+                <ul>
+                    <li>#include -> diretiva de pré-processamento para incluir bibliotecas</li>
+                    <li>stdio.h -> biblioteca padrão de entrada e saída</li>
+                    <li>int main() -> função principal que retorna um inteiro</li>
+                    <li>& -> operador de endereço, usado para passar o endereço da variável para a função scanf</li>
+                    <li>\t -> tabulação horizontal</li>
+                    <li>int -> inteiro</li>
+                    <li>printf -> função de saída (exibir no terminal)</li>
+                    <li>scanf -> função de entrada (receber do terminal)</li>
+                    <li>%d -> especificador de formato para inteiros</li>
+                    <li>endereço de memória -> local na memória onde a variável está armazenada</li>
+                    <li>pointer -> variável que armazena o endereço de memória de outra variável</li>
+                    <li>return -> retorna um valor da função para o chamador</li>
+                </ul>
+            </section>
+
+            <section class="fundoaula slide" data-slide="2">
+                <h2>Aula 2</h2>
+                <h3>Tabela ASCII</h3>
+                <a href="https://www.ime.usp.br/~kellyrb/mac2166_2015/tabela_ascii.html" target="_blank">Link site tabela ASCII</a>
+
+                <h3>Sistema de Numeração</h3>
+                <ul>
+                    <li>Decimal -> base 10 (0-9)
+                        <p>Ex: 123456</p>
+                    </li>
+                    <li>Binário -> base 2 (0 e 1)
+                        <p>Ex: 123456 -> 11110000001000000</p>
+                    </li>
+                    <li>Octal -> base 8 (0-7)
+                        <p>Ex: 123456 -> 361100</p>
+                    </li>
+                    <li>Hexadecimal -> base 16 (0-9, A-F)
+                        <p>Ex: 123456 -> 1E240</p>
+                    </li>
+                    <li>OBS: endereço com o começo 0x é um valor hexadecimal, que é uma representação de números em base 16.</li>
+                </ul>
+
+                <h3>Bytes</h3>
+                <ul>
+                    <li>1 byte = 8 bits</li>
+                    <li>1 bit = 0 ou 1</li>
+                    <li>1 byte pode representar 256 valores diferentes (2^8)</li>
+                    <li>Ex: 00000000 -> 0, 00000001 -> 1, 00000010 -> 2, ..., 11111111 -> 255</li>
+                </ul>
+
+                <h3>Alguns comandos falados aula 2</h3>
+                <ul>
+                    <li>%d -> especificador de formato para inteiros</li>
+                    <li>%f -> especificador de formato para float</li>
+                    <li>%.2f -> especificador de formato para float com 2 casas decimais</li>
+                    <li>%c -> especificador de formato para char</li>
+                    <li>%hu -> especificador de formato para unsigned short int</li>
+                    <li>%u -> especificador de formato para unsigned int</li>
+                    <li>%hd -> especificador de formato para short int</li>
+                    <li>%ld -> especificador de formato para long int</li>
+                    <li>%lld -> especificador de formato para long long int</li>
+                    <li>%lf -> especificador de formato para double</li>
+                </ul>
+            </section>
+        </section>
+
+        <button class="arrow-button next" aria-label="Próximo slide">&#10095;</button>
+    </main>
+
+    <script src="./script.js"></script>
+
 </body>
 </html>
 
-//case sensitive -> diferencia maiúsculas de minúsculas 
+

@@ -1,0 +1,108 @@
+.background {
+    background-color: rgb(200, 255, 226);
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.titulo1 {
+    color: rgb(29, 57, 42);
+    text-align: center;
+    padding-top: 24px;
+    margin-bottom: 16px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    overflow: hidden;
+}
+
+.slides {
+    position: relative;
+}
+
+.slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.fundoaula {
+    background-color: rgb(158, 218, 186);
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin: 16px 48px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.arrow-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: rgba(29, 57, 42, 0.85);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.arrow-button:hover {
+    background-color: rgba(29, 57, 42, 1);
+}
+
+.arrow-button.prev {
+    left: 8px;
+}
+
+.arrow-button.next {
+    right: 8px;
+}
+
+h2,
+h3,
+p,
+li,
+a {
+    color: rgb(29, 57, 42);
+}
+
+ul {
+    padding-left: 18px;
+}
+
+a {
+    color: rgb(12, 101, 58);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+    .fundoaula {
+        padding: 20px;
+        margin: 0 10px;
+    }
+
+    .arrow-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
